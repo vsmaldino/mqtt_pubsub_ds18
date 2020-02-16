@@ -1,0 +1,11 @@
+[Unit]
+Description=MQTT Subscriber To MySQL
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/mqtt_pubsub_ds18-1.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
